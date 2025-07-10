@@ -26,7 +26,8 @@ public class UserController {
     // CREATE - POST
     @PostMapping
     public ResponseEntity<com.example.practice.Entity.User> createUser(@Valid @RequestBody User user) {
-        return ResponseEntity.ok(userRepository.save(user));
+        user = userService.addUser(user);
+        return ResponseEntity.ok().body(user);
     }
 
     // READ - GET all

@@ -1,16 +1,21 @@
 package com.example.practice;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
 @EnableCaching
+@EnableScheduling
 public class PracticeApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(PracticeApplication.class, args);
-		System.out.println("Shah Alam");
-	}
+  private static final Logger logger = LoggerFactory.getLogger(PracticeApplication.class);
 
+  public static void main(String[] args) {
+    SpringApplication.run(PracticeApplication.class, args);
+    logger.info("Practice Application started successfully - Shah Alam");
+  }
 }

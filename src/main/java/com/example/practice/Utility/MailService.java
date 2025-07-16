@@ -21,6 +21,14 @@ public class MailService {
     log.info(CommonConstant.LOG_MAIL_SERVICE_INITIALIZED);
   }
 
+  /**
+   * Sends a simple email with the specified recipient, subject, and body.
+   *
+   * @param to the recipient's email address
+   * @param subject the subject of the email
+   * @param body the body content of the email
+   * @throws Exception if an error occurs while sending the email
+   */
   public void sendSimpleEmail(String to, String subject, String body) {
     log.info(CommonConstant.LOG_SENDING_EMAIL, to, subject);
     try {

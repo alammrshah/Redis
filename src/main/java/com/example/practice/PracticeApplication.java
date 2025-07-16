@@ -14,6 +14,7 @@ public class PracticeApplication {
 
   private static final Logger logger = LoggerFactory.getLogger(PracticeApplication.class);
 
+
   public static void main(String[] args) {
     SpringApplication.run(PracticeApplication.class, args);
     logger.info("Practice Application started successfully - Shah Alam");
